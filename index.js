@@ -87,6 +87,7 @@ var finances = [
   ['Feb-2017', 671099],
 ];
 //Header
+console.log("Financial Analysis\n----------------------------");
 // total months
 // total profit
 // average change
