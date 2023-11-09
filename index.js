@@ -89,6 +89,8 @@ var finances = [
 //Header
 console.log("Financial Analysis\n----------------------------");
 // total months
+var totalMonths = finances.length
+console.log("Total Months:", totalMonths);
 // total profit
 // average change
 // greatest increase in profit/loss
