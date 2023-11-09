@@ -92,6 +92,11 @@ console.log("Financial Analysis\n----------------------------");
 var totalMonths = finances.length
 console.log("Total Months:", totalMonths);
 // total profit
+var totalProfit = 0;
+for (var i = 0; i < finances.length; i++) {
+    totalProfit += finances[i][1];
+}
+console.log("Total Profit:", "$" + totalProfit);
 // average change
 // greatest increase in profit/loss
 // greatest decrease in profit/loss
