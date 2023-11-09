@@ -94,25 +94,35 @@ console.log("Total Months:", totalMonths);
 // total profit
 var totalProfit = 0;
 for (var i = 0; i < finances.length; i++) {
-    totalProfit += finances[i][1];
+  totalProfit += finances[i][1];
 }
 console.log("Total Profit:", "$" + totalProfit);
 // average change
 var totalChange = 0;
 for (var i = 1; i < finances.length; i++) {
-  totalChange += finances[i][1] - finances[i-1][1];
+  totalChange += finances[i][1] - finances[i - 1][1];
 }
 var averageChange = totalChange / (finances.length - 1);
 console.log("Average Change:", "$" + averageChange.toFixed(2)); // 2 decimal places
 // greatest increase in profit/loss
-var maxIncrease=0
-var increaseMonth='';
-for(var i = 1; i <finances.length; i++){
-    var increase= finances[i][1] - finances[i-1][1];
-    if(increase > maxIncrease){
-        maxIncrease = increase;
-        increaseMonth = finances[i][0];
-    }
+var maxIncrease = 0
+var increaseMonth = '';
+for (var i = 1; i < finances.length; i++) {
+  var increase = finances[i][1] - finances[i - 1][1];
+  if (increase > maxIncrease) {
+    maxIncrease = increase;
+    increaseMonth = finances[i][0];
+  }
 }
-console.log("Greatest Increase in Profits/Losses:",  increaseMonth, "(" + "$" +  maxIncrease + ")");
+console.log("Greatest Increase in Profits/Losses:", increaseMonth, "(" + "$" + maxIncrease + ")");
 // greatest decrease in profit/loss
+var maxDecrease = 0
+var decreaseMonth = '';
+for (var i = 1; i < finances.length; i++) {
+  var decrease = finances[i][1] - finances[i - 1][1];
+  if (decrease < maxDecrease) {
+    maxDecrease = decrease;
+    decreaseMonth = finances[i][0];
+  }
+}
+console.log("Greatest decrease in Profits/Losses:", decreaseMonth, "(" + "$" + maxDecrease + ")");
