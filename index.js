@@ -98,5 +98,11 @@ for (var i = 0; i < finances.length; i++) {
 }
 console.log("Total Profit:", "$" + totalProfit);
 // average change
+var totalChange = 0;
+for (var i = 1; i < finances.length; i++) {
+  totalChange += finances[i][1] - finances[i-1][1];
+}
+var averageChange = totalChange / (finances.length - 1);
+console.log("Average Change:", "$" + averageChange.toFixed(2)); // 2 decimal places
 // greatest increase in profit/loss
 // greatest decrease in profit/loss
